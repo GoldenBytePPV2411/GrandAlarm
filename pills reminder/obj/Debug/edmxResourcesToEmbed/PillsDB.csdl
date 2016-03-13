@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PillsReminderModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Drug">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DrugName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dose" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AddInf" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="IntakeDurations" Relationship="Self.FK__IntakeDur__Id_dr__1A14E395" FromRole="Drugs" ToRole="IntakeDuration" />
+    <NavigationProperty Name="WeekIntakes" Relationship="Self.FK__WeekIntak__Id_dr__1BFD2C07" FromRole="Drugs" ToRole="WeekIntake" />
+  </EntityType>
+  <EntityType Name="IntakeDuration">
+    <Key>
+      <PropertyRef Name="Id_person" />
+      <PropertyRef Name="Id_drug" />
+    </Key>
+    <Property Name="Id_person" Type="Int32" Nullable="false" />
+    <Property Name="Id_drug" Type="Int32" Nullable="false" />
+    <Property Name="DateFrom" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DateTo" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Drug" Relationship="Self.FK__IntakeDur__Id_dr__1A14E395" FromRole="IntakeDuration" ToRole="Drugs" />
+    <NavigationProperty Name="User" Relationship="Self.FK__IntakeDur__Id_pe__1B0907CE" FromRole="IntakeDuration" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="Binary" MaxLength="50" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="IntakeDurations" Relationship="Self.FK__IntakeDur__Id_pe__1B0907CE" FromRole="Users" ToRole="IntakeDuration" />
+    <NavigationProperty Name="WeekIntakes" Relationship="Self.FK__WeekIntak__Id_pe__1CF15040" FromRole="Users" ToRole="WeekIntake" />
+  </EntityType>
+  <EntityType Name="WeekIntake">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_person" Type="Int32" Nullable="false" />
+    <Property Name="Id_drug" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Intaken" Type="Boolean" />
+    <NavigationProperty Name="Drug" Relationship="Self.FK__WeekIntak__Id_dr__1BFD2C07" FromRole="WeekIntake" ToRole="Drugs" />
+    <NavigationProperty Name="User" Relationship="Self.FK__WeekIntak__Id_pe__1CF15040" FromRole="WeekIntake" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK__IntakeDur__Id_dr__1A14E395">
+    <End Role="Drugs" Type="Self.Drug" Multiplicity="1" />
+    <End Role="IntakeDuration" Type="Self.IntakeDuration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drugs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IntakeDuration">
+        <PropertyRef Name="Id_drug" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WeekIntak__Id_dr__1BFD2C07">
+    <End Role="Drugs" Type="Self.Drug" Multiplicity="1" />
+    <End Role="WeekIntake" Type="Self.WeekIntake" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drugs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WeekIntake">
+        <PropertyRef Name="Id_drug" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IntakeDur__Id_pe__1B0907CE">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="IntakeDuration" Type="Self.IntakeDuration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IntakeDuration">
+        <PropertyRef Name="Id_person" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WeekIntak__Id_pe__1CF15040">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="WeekIntake" Type="Self.WeekIntake" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WeekIntake">
+        <PropertyRef Name="Id_person" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PillsReminderEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Drugs" EntityType="Self.Drug" />
+    <EntitySet Name="IntakeDurations" EntityType="Self.IntakeDuration" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="WeekIntakes" EntityType="Self.WeekIntake" />
+    <AssociationSet Name="FK__IntakeDur__Id_dr__1A14E395" Association="Self.FK__IntakeDur__Id_dr__1A14E395">
+      <End Role="Drugs" EntitySet="Drugs" />
+      <End Role="IntakeDuration" EntitySet="IntakeDurations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WeekIntak__Id_dr__1BFD2C07" Association="Self.FK__WeekIntak__Id_dr__1BFD2C07">
+      <End Role="Drugs" EntitySet="Drugs" />
+      <End Role="WeekIntake" EntitySet="WeekIntakes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IntakeDur__Id_pe__1B0907CE" Association="Self.FK__IntakeDur__Id_pe__1B0907CE">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="IntakeDuration" EntitySet="IntakeDurations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WeekIntak__Id_pe__1CF15040" Association="Self.FK__WeekIntak__Id_pe__1CF15040">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="WeekIntake" EntitySet="WeekIntakes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

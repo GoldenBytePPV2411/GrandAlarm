@@ -41,22 +41,22 @@ namespace pills_reminder.SN
             MD5 md = new MD5CryptoServiceProvider();
             byte[] bt = Encoding.UTF8.GetBytes(PassBoxP.Password);
 
-            using (AchievmentsEntities ach = new AchievmentsEntities())
+            using (PillsReminderEntities rem = new PillsReminderEntities())
             {
                 
-                if (ach.Passwords.Select(t => t.Name == TextBoxName.Text).FirstOrDefault())
+                if (rem.Users.Select(t => t.Login == TextBoxName.Text).FirstOrDefault())
                 {
                     MessageBox.Show("Такое имя уже занято");
                     return;
                 }
 
-                Password p = new Password()
+                User p = new User()
                 {
-                    Name = TextBoxName.Text,
-                    Password1 = bt
+                    Login = TextBoxName.Text,
+                    Password = bt
                 };
-                ach.Passwords.Add(p);
-                ach.SaveChanges();
+                rem.Users.Add(p);
+                rem.SaveChanges();
             }
 
             this.Close();

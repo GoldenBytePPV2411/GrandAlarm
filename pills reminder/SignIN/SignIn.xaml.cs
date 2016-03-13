@@ -29,14 +29,14 @@ namespace pills_reminder.SN
         {
             MD5 md = new MD5CryptoServiceProvider();
 
-            using (AchievmentsEntities ach = new AchievmentsEntities())
+            using (PillsReminderEntities rem = new PillsReminderEntities())
             {
-                Password p = ach.Passwords.Where(x => x.Name == TextBoxName.Text).FirstOrDefault();
+                User p = rem.Users.Where(x => x.Login == TextBoxName.Text).FirstOrDefault();
                 byte[]b= Encoding.UTF8.GetBytes(PassBoxP.Password);
                 if (p != null)
-                    if (b.SequenceEqual(p.Password1))
+                    if (b.SequenceEqual(p.Password))
                     {
-                        App.curPnID = p.ID;
+                        App.curPnID = p.Id;
                         MainWindow mw = new MainWindow();
                         mw.Show();
                         this.Close();

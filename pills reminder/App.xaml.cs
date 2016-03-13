@@ -13,5 +13,9 @@ namespace pills_reminder
     /// </summary>
     public partial class App : Application
     {
+        /// <summary>
+        /// ID текущего пользователя
+        /// </summary>
+        public static int curPnID = -1;
     }
 }

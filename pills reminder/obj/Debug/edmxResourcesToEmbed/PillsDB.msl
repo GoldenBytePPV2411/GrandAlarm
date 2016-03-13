@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PillsReminderModelStoreContainer" CdmEntityContainer="PillsReminderEntities">
+    <EntitySetMapping Name="Drugs">
+      <EntityTypeMapping TypeName="PillsReminderModel.Drug">
+        <MappingFragment StoreEntitySet="Drugs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DrugName" ColumnName="DrugName" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Dose" ColumnName="Dose" />
+          <ScalarProperty Name="AddInf" ColumnName="AddInf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IntakeDurations">
+      <EntityTypeMapping TypeName="PillsReminderModel.IntakeDuration">
+        <MappingFragment StoreEntitySet="IntakeDuration">
+          <ScalarProperty Name="Id_person" ColumnName="Id_person" />
+          <ScalarProperty Name="Id_drug" ColumnName="Id_drug" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="PillsReminderModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeekIntakes">
+      <EntityTypeMapping TypeName="PillsReminderModel.WeekIntake">
+        <MappingFragment StoreEntitySet="WeekIntake">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_person" ColumnName="Id_person" />
+          <ScalarProperty Name="Id_drug" ColumnName="Id_drug" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Intaken" ColumnName="Intaken" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

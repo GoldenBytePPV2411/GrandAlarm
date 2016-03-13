@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PillsReminderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Drugs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DrugName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Dose" Type="varchar" MaxLength="50" />
+    <Property Name="AddInf" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="IntakeDuration">
+    <Key>
+      <PropertyRef Name="Id_person" />
+      <PropertyRef Name="Id_drug" />
+    </Key>
+    <Property Name="Id_person" Type="int" Nullable="false" />
+    <Property Name="Id_drug" Type="int" Nullable="false" />
+    <Property Name="DateFrom" Type="date" Nullable="false" />
+    <Property Name="DateTo" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Login" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varbinary" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WeekIntake">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_person" Type="int" Nullable="false" />
+    <Property Name="Id_drug" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Time" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Intaken" Type="bit" />
+  </EntityType>
+  <Association Name="FK__IntakeDur__Id_dr__1A14E395">
+    <End Role="Drugs" Type="Self.Drugs" Multiplicity="1" />
+    <End Role="IntakeDuration" Type="Self.IntakeDuration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drugs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IntakeDuration">
+        <PropertyRef Name="Id_drug" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IntakeDur__Id_pe__1B0907CE">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="IntakeDuration" Type="Self.IntakeDuration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IntakeDuration">
+        <PropertyRef Name="Id_person" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WeekIntak__Id_dr__1BFD2C07">
+    <End Role="Drugs" Type="Self.Drugs" Multiplicity="1" />
+    <End Role="WeekIntake" Type="Self.WeekIntake" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drugs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WeekIntake">
+        <PropertyRef Name="Id_drug" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WeekIntak__Id_pe__1CF15040">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="WeekIntake" Type="Self.WeekIntake" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WeekIntake">
+        <PropertyRef Name="Id_person" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PillsReminderModelStoreContainer">
+    <EntitySet Name="Drugs" EntityType="Self.Drugs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IntakeDuration" EntityType="Self.IntakeDuration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WeekIntake" EntityType="Self.WeekIntake" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__IntakeDur__Id_dr__1A14E395" Association="Self.FK__IntakeDur__Id_dr__1A14E395">
+      <End Role="Drugs" EntitySet="Drugs" />
+      <End Role="IntakeDuration" EntitySet="IntakeDuration" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IntakeDur__Id_pe__1B0907CE" Association="Self.FK__IntakeDur__Id_pe__1B0907CE">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="IntakeDuration" EntitySet="IntakeDuration" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WeekIntak__Id_dr__1BFD2C07" Association="Self.FK__WeekIntak__Id_dr__1BFD2C07">
+      <End Role="Drugs" EntitySet="Drugs" />
+      <End Role="WeekIntake" EntitySet="WeekIntake" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WeekIntak__Id_pe__1CF15040" Association="Self.FK__WeekIntak__Id_pe__1CF15040">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="WeekIntake" EntitySet="WeekIntake" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

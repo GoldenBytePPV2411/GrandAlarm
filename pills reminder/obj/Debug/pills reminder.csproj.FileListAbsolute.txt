@@ -28,3 +28,15 @@ C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\p
 C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\Dictionary1.baml
 C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\SignIN\SignIn.baml
 C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\SignIN\SignIn.g.cs
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\bin\Debug\pills reminder.exe
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\bin\Debug\pills reminder.pdb
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\bin\Debug\EntityFramework.dll
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\bin\Debug\EntityFramework.xml
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\App.baml
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\MainWindow.baml
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\Main.baml
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\pills reminder.g.resources
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\pills_reminder.Properties.Resources.resources
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\pills reminder.csproj.GenerateResource.Cache

@@ -15,19 +15,19 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
-        <TextBlock Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Регистрация нового пользователя" VerticalAlignment="Center" FontSize="18" TextAlignment="Center"/>
+        <TextBlock Grid.ColumnSpan="2" TextWrapping="Wrap" Text="Регистрация нового пользователя" Style="{StaticResource TextContStyle}" FontSize="18" TextAlignment="Center" Foreground="{StaticResource SIButBr}"/>
 
-        <Label Content="Имя" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Row="1" FontSize="16"/>
-        <TextBox Name="TextBoxName" HorizontalAlignment="Center" Height="23" Margin="0,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" FontSize="16" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="Имя" Style="{StaticResource TextContStyle}" Grid.Row="1" FontSize="16" Foreground="{StaticResource SIButBr}"/>
+        <TextBox Name="TextBoxName" Style="{StaticResource TextContStyle}" Height="23"  TextWrapping="Wrap" Text="" Width="120" FontSize="16" Grid.Row="1" Grid.Column="1" />
 
-        <Label Content="Пароль" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Row="2" FontSize="16"/>
-        <PasswordBox  Name="PassBoxP" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="120" Grid.Row="2" Grid.Column="1" FontSize="16"/>
+        <Label Content="Пароль" Style="{StaticResource TextContStyle}" Grid.Row="2" FontSize="16" Foreground="{StaticResource SIButBr}"/>
+        <PasswordBox  Name="PassBoxP" Style="{StaticResource TextContStyle}" Width="120" Grid.Row="2" Grid.Column="1" FontSize="16"/>
 
-        <Label Content="Повторите пароль" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Row="3" FontSize="16"/>
-        <PasswordBox  Name="PassBoxPAg" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="120" Grid.Row="3" Grid.Column="1" FontSize="16"/>
-        
-        <Button Content="Создать" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="100" Grid.Row="4" FontSize="16" Click="Button_Click_1" IsDefault="True"/>
-        <Button Content="Отмена" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="100" Grid.Column="1" Grid.Row="4" FontSize="16" Click="Button_Click"/>
+        <Label Content="Повторите пароль" Style="{StaticResource TextContStyle}" Grid.Row="3" FontSize="16" Foreground="{StaticResource SIButBr}"/>
+        <PasswordBox  Name="PassBoxPAg" Style="{StaticResource TextContStyle}"  Width="120" Grid.Row="3" Grid.Column="1" FontSize="16"/>
+
+        <Button Content="Создать" Style="{StaticResource TextContStyle}" Width="100" Grid.Row="4" FontSize="16" Click="Button_Click_1" IsDefault="True" Background="{StaticResource SIButBr}"/>
+        <Button Content="Отмена" Style="{StaticResource TextContStyle}" Width="100" Grid.Column="1" Grid.Row="4" FontSize="16" Click="Button_Click" IsCancel="True" Background="{StaticResource SIButBr}"/>
         
     </Grid>
 </Window>

@@ -4,8 +4,8 @@
     <SolidColorBrush x:Key="SIButBr" Color="Red"/>
     <Style x:Key="TextContStyle">
         <Setter Property="Control.VerticalAlignment" Value="Center"/>
-        <Setter Property="Control.HorizontalAlignment" Value="Center"/>
-        <Style Property="Control.FontSize" Value="12"/>
+        <Setter Property="Control.HorizontalAlignment" Value="Center"/>       
      </Style>
+    
     <Control x:Key="TextSt" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"/>
 </ResourceDictionary>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1704e9eb53ee42b69972c293d367423e" Name="Diagram1">
+        <EntityTypeShape EntityType="PillsReminderModel.Drug" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PillsReminderModel.IntakeDuration" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PillsReminderModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PillsReminderModel.WeekIntake" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="PillsReminderModel.FK__IntakeDur__Id_dr__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="PillsReminderModel.FK__WeekIntak__Id_dr__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="PillsReminderModel.FK__IntakeDur__Id_pe__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="PillsReminderModel.FK__WeekIntak__Id_pe__1CF15040" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
