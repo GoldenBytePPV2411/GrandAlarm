@@ -1,0 +1,30 @@
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\bin\Debug\pills reminder.exe.config
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\bin\Debug\pills reminder.exe
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\bin\Debug\pills reminder.pdb
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\pills reminder.csprojResolveAssemblyReference.cache
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\MainWindow.g.cs
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\App.g.cs
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\pills reminder_MarkupCompile.cache
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\pills reminder_MarkupCompile.lref
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\MainWindow.baml
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\pills reminder.g.resources
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\pills_reminder.Properties.Resources.resources
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\pills reminder.csproj.GenerateResource.Cache
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\pills reminder.exe
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\pills reminder.pdb
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\Main.g.cs
+c:\users\дарья\documents\visual studio 2015\Projects\pills reminder\pills reminder\obj\Debug\Main.baml
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\bin\Debug\pills reminder.exe.config
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\pills reminder.exe
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\pills reminder.pdb
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\pills reminder.csprojResolveAssemblyReference.cache
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\SignIN\Registration.baml
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\MainWindow.g.cs
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\Main.g.cs
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\SignIN\Registration.g.cs
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\App.g.cs
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\pills reminder_MarkupCompile.cache
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\pills reminder_MarkupCompile.lref
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\Dictionary1.baml
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\SignIN\SignIn.baml
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\SignIN\SignIn.g.cs

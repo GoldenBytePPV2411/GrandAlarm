@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <SolidColorBrush x:Key="SIButBr" Color="Red"/>
+    <Style x:Key="TextContStyle">
+        <Setter Property="Control.VerticalAlignment" Value="Center"/>
+        <Setter Property="Control.HorizontalAlignment" Value="Center"/>
+        <Style Property="Control.FontSize" Value="12"/>
+     </Style>
+    <Control x:Key="TextSt" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"/>
+</ResourceDictionary>
