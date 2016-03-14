@@ -70,6 +70,9 @@
     <Compile Include="Drug.cs">
       <DependentUpon>PillsDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DrugInfo.xaml.cs">
+      <DependentUpon>DrugInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IntakeDuration.cs">
       <DependentUpon>PillsDB.tt</DependentUpon>
     </Compile>
@@ -93,6 +96,7 @@
     </Compile>
     <Compile Include="SignIN\Registration.xaml.cs" />
     <Compile Include="SignIN\SignIn.xaml.cs" />
+    <Compile Include="Timer.cs" />
     <Compile Include="User.cs">
       <DependentUpon>PillsDB.tt</DependentUpon>
     </Compile>
@@ -100,6 +104,10 @@
       <DependentUpon>PillsDB.tt</DependentUpon>
     </Compile>
     <Page Include="Dictionary1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrugInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

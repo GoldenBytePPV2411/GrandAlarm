@@ -21,14 +21,23 @@ namespace pills_reminder
     /// </summary>
     public partial class MainWindow : Window
     {
+        Timer tm;
         DataTable drugsInfo { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            DrugInfo di = new DrugInfo(new Drug()
+            {
+                DrugName = "lala",
+                Dose = "50",
+                AddInf = "gfsdjgkdfngsdfglksdfngosdnfgjdfgjsdflgsdfkgnsdofg"
+            });
+            di.Show();
             DrTableCreate();
             var drugs = GetFullDrList();
             TableToDGBinding(drugs);
             DGInfo.ItemsSource = drugsInfo.AsDataView();
+            tm = new Timer();
         }
 
         void DrTableCreate()

@@ -40,3 +40,5 @@ C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\M
 C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\pills reminder.g.resources
 C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\pills_reminder.Properties.Resources.resources
 C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\pills reminder.csproj.GenerateResource.Cache
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\DrugInfo.baml
+C:\Users\vlad\Downloads\pills_reminder\pills reminder\pills reminder\obj\Debug\DrugInfo.g.cs
